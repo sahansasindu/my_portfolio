@@ -26,6 +26,39 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        .portfolio-img-container {
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .portfolio-img-container:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-img-container:hover .card-img-top {
+            transform: scale(1.05);
+        }
+
+        .portfolio-img-container .card-img-top {
+            transition: transform 0.3s ease;
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
@@ -457,8 +490,7 @@
 
                         </div>
                         <div class="card-footer bg-white d-flex gap-3 ps-3 pb-3">
-                            <a href="https://github.com/sahansasindu/HR_and_Inventory_Management_System"
-                                class="text-dark" title="GitHub"><i class="fab fa-github fa-lg"></i></a>
+
                         </div>
                     </div>
                 </div>
@@ -487,24 +519,89 @@
                 <!-- Project 3 -->
                 <div class="col-md-4">
                     <div class="card border-0 shadow-sm h-100">
-                        <img src="img/Library.png" class="card-img-top" alt="Hotel Management System">
+                        <div class="portfolio-img-container" data-toggle="modal" data-target="#libraryOverviewModal">
+                            <img src="img/Library.png" class="card-img-top" alt="Library Management System">
+                            <div class="portfolio-overlay">
+                                <span
+                                    class="btn btn-light rounded-pill px-4 py-2 font-weight-bold d-flex align-items-center text-primary"
+                                    style="font-size: 16px;">
+                                    <i class="far fa-eye mr-2" style="font-size: 18px;"></i> Preview
+                                </span>
+                            </div>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title text-primary fw-bold">Library Management System</h5>
                             <p class="card-text">
-                                This Library Management System is a full-stack web application developed using
-                                <strong>Spring Boot</strong> for the backend and <strong>Angular</strong> for the
-                                frontend. It streamlines day-to-day library operations such as managing books, members,
-                                and borrowing records efficiently.
+                                A full-stack web-based Library Management System developed to simplify and automate
+                                library operations.The project also integrates Retrieval-Augmented Generation (RAG) to
+                                enhance intelligent
+                                search and user interaction capabilities.
+                                <br> 🔹 Technologies Used
+                            <ul class="mb-0">
+                                <li>Frontend: Angular, HTML, CSS, TypeScript</li>
+                                <li>Backend: Spring Boot, Java</li>
+                                <li>Database: MySQL</li>
+                                <li>Authentication: JWT Authentication</li>
+                                <li>Tools: Git, Postman</li>
+                                <li>AI Integration: OpenAI API (GPT-4o Model)</li>
+                            </ul>
                             </p>
 
                         </div>
                         <div class="card-footer bg-white d-flex gap-3 ps-3 pb-3">
                             <a href="https://github.com/sahansasindu/library-management-system-frontend-?tab=readme-ov-file"
-                                class="text-dark" title="GitHub"><i class="fab fa-github fa-lg"></i></a>
+                                class="text-dark mr-3" title="GitHub"><i class="fab fa-github fa-lg"></i></a>
+                            <a href="https://drive.google.com/file/d/1p2UBggDwM0AyBO54GfXwBtG-Xiv3qa-R/view?usp=drive_link"
+                                class="text-dark" title="Demo Video" target="_blank"><i
+                                    class="fas fa-video fa-lg"></i></a>
                         </div>
                     </div>
                 </div>
 
+            </div>
+        </div>
+
+        <!-- Library Overview Modal -->
+        <div class="modal fade" id="libraryOverviewModal" tabindex="-1" role="dialog"
+            aria-labelledby="libraryOverviewModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="libraryOverviewModalLabel">Library Management System - Overview</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center mb-4">
+                            <img id="mainLibraryImage" src="img/Library.png" class="img-fluid rounded shadow"
+                                style="max-height: 65vh; object-fit: contain;" alt="Main Overview">
+                        </div>
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <img src="img/Library.png" class="img-thumbnail"
+                                style="width: 100px; height: 80px; object-fit: cover; cursor: pointer; margin: 5px; border-width: 2px;"
+                                onclick="document.getElementById('mainLibraryImage').src = this.src;">
+                            <img src="img/libary1.png" class="img-thumbnail"
+                                style="width: 100px; height: 80px; object-fit: cover; cursor: pointer; margin: 5px; border-width: 2px;"
+                                onclick="document.getElementById('mainLibraryImage').src = this.src;">
+                            <img src="img/libary6.png" class="img-thumbnail"
+                                style="width: 100px; height: 80px; object-fit: cover; cursor: pointer; margin: 5px; border-width: 2px;"
+                                onclick="document.getElementById('mainLibraryImage').src = this.src;">
+                            <img src="img/libary3.png" class="img-thumbnail"
+                                style="width: 100px; height: 80px; object-fit: cover; cursor: pointer; margin: 5px; border-width: 2px;"
+                                onclick="document.getElementById('mainLibraryImage').src = this.src;">
+                            <img src="img/libary4.png" class="img-thumbnail"
+                                style="width: 100px; height: 80px; object-fit: cover; cursor: pointer; margin: 5px; border-width: 2px;"
+                                onclick="document.getElementById('mainLibraryImage').src = this.src;">
+                            <img src="img/libary5.png" class="img-thumbnail"
+                                style="width: 100px; height: 80px; object-fit: cover; cursor: pointer; margin: 5px; border-width: 2px;"
+                                onclick="document.getElementById('mainLibraryImage').src = this.src;">
+                            <img src="img/libary2.png" class="img-thumbnail"
+                                style="width: 100px; height: 80px; object-fit: cover; cursor: pointer; margin: 5px; border-width: 2px;"
+                                onclick="document.getElementById('mainLibraryImage').src = this.src;">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
