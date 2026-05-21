@@ -502,8 +502,8 @@
 
                         </div>
                         <div class="card-footer bg-white d-flex gap-3 ps-3 pb-3">
-                            <a href="https://github.com/sahansasindu/library-management-system-frontend-?tab=readme-ov-file"
-                                class="text-dark mr-3" title="GitHub"><i class="fab fa-github fa-lg"></i></a>
+                            <a href="https://github.com/sahansasindu/Library-management-system" class="text-dark mr-3"
+                                title="GitHub"><i class="fab fa-github fa-lg"></i></a>
                             <a href="https://drive.google.com/file/d/1p2UBggDwM0AyBO54GfXwBtG-Xiv3qa-R/view?usp=drive_link"
                                 class="text-dark" title="Demo Video" target="_blank"><i
                                     class="fas fa-video fa-lg"></i></a>
@@ -554,6 +554,45 @@
                     </div>
                 </div>
 
+                <!-- Project 4 -->
+                <div class="col-lg-6 col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="portfolio-img-container" data-toggle="modal" data-target="#detectionSystemModal">
+                            <img src="img/detectiosystem1.png" class="card-img-top" alt="Modification Detection System">
+                            <div class="portfolio-overlay">
+                                <span
+                                    class="btn btn-light rounded-pill px-4 py-2 font-weight-bold d-flex align-items-center text-primary"
+                                    style="font-size: 16px;">
+                                    <i class="far fa-eye mr-2" style="font-size: 18px;"></i> Preview
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title text-primary fw-bold">Detecting Legal & Illegal Modifications in BAJAJ
+                                Three-Wheelers</h5>
+                            <p class="card-text">
+                                An AI-powered vehicle inspection system developed to detect legal and illegal
+                                modifications in BAJAJ three-wheelers in Sri Lanka using advanced computer vision and
+                                deep learning techniques. The system utilizes YOLOv8, YOLOv9, and YOLOv11 models for
+                                real-time object detection and analysis through a Flask-based web application.
+                            </p>
+                            <p><b>Technologies Used</b></p>
+                            <ul class="mb-0">
+                                <li>Frontend: HTML, CSS, JavaScript</li>
+                                <li>Backend: Python, Flask</li>
+                                <li>AI Models: YOLOv8, YOLOv9, YOLOv11</li>
+                                <li>Computer Vision: OpenCV</li>
+                                <li>Tools: Git, Roboflow, Labeling</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer bg-white d-flex gap-3 ps-3 pb-3">
+                            <div class="card-footer bg-white d-flex gap-3 ps-3 pb-3">
+                                <a href="https://github.com/sahansasindu/tuk-tuk_mod-detection-system" class="text-dark"
+                                    title="GitHub"><i class="fab fa-github fa-lg"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>
@@ -596,6 +635,36 @@
                             <img src="img/libary2.png" class="img-thumbnail"
                                 style="width: 100px; height: 80px; object-fit: cover; cursor: pointer; margin: 5px; border-width: 2px;"
                                 onclick="document.getElementById('mainLibraryImage').src = this.src;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detection System Modal -->
+        <div class="modal fade" id="detectionSystemModal" tabindex="-1" role="dialog"
+            aria-labelledby="detectionSystemModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="detectionSystemModalLabel">Modification Detection System - Overview
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center mb-4">
+                            <img id="mainDetectionImage" src="img/detectiosystem1.png" class="img-fluid rounded shadow"
+                                style="max-height: 65vh; object-fit: contain;" alt="Main Overview">
+                        </div>
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <img src="img/detectiosystem1.png" class="img-thumbnail"
+                                style="width: 100px; height: 80px; object-fit: cover; cursor: pointer; margin: 5px; border-width: 2px;"
+                                onclick="document.getElementById('mainDetectionImage').src = this.src;">
+                            <img src="img/detectiosystem2.png" class="img-thumbnail"
+                                style="width: 100px; height: 80px; object-fit: cover; cursor: pointer; margin: 5px; border-width: 2px;"
+                                onclick="document.getElementById('mainDetectionImage').src = this.src;">
                         </div>
                     </div>
                 </div>
